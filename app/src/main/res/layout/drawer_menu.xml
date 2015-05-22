@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Copyright (C) 2013 Daniel Velazco
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_drawer_right"
+    android:layout_width="@dimen/navigation_drawer_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:orientation="vertical"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:background="#CFDFEF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title bar -->
+        <RelativeLayout
+            android:id="@+id/menu_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:background="#B7CFE7">
+
+            <ImageView
+                android:id="@+id/iv_app_icon"
+                android:layout_width="@dimen/navigation_drawer_app_icon_size"
+                android:layout_height="@dimen/navigation_drawer_app_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_user"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_app_icon"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/navigation_drawer_items_text_size"
+                android:textColor="#2F5F8F" />
+
+            <ImageView
+                android:id="@+id/iv_title_more"
+                android:layout_width="@dimen/navigation_drawer_app_icon_size"
+                android:layout_height="@dimen/navigation_drawer_app_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_overflow"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="right"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <!--<ExpandableListView
+            android:id="@+id/cimlap_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height">
+        </ExpandableListView>-->
+
+        <!-- Menu item: Tetejére -->
+        <RelativeLayout
+            android:id="@+id/menu_item_tetejere"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_tetejere"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_tetejere"
+                android:contentDescription="@string/menu_tetejere" />
+
+            <TextView
+                android:id="@+id/tv_tetejere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_tetejere"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_tetejere" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Frissítés -->
+        <RelativeLayout
+            android:id="@+id/menu_item_frissites"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_frissites"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_frissites"
+                android:contentDescription="@string/menu_frissites" />
+
+            <TextView
+                android:id="@+id/tv_frissites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_frissites"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_frissites" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Címlap -->
+        <RelativeLayout
+            android:id="@+id/menu_item_cimlap"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_newsfeed"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_cimlap"
+                android:contentDescription="@string/menu_cimlap" />
+
+            <TextView
+                android:id="@+id/tv_newsfeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_newsfeed"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_cimlap" />
+
+            <ImageView
+                android:id="@+id/iv_cimlap_more"
+                android:layout_width="@dimen/navigation_drawer_app_icon_size"
+                android:layout_height="@dimen/navigation_drawer_app_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_overflow"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="right"
+                android:contentDescription="@string/menu_cimlap" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Friss -->
+        <RelativeLayout
+            android:id="@+id/menu_item_friss"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_friss"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_friss"
+                android:contentDescription="@string/menu_friss" />
+
+            <TextView
+                android:id="@+id/tv_friss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_friss"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="start"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_friss" />
+
+            <ImageView
+                android:id="@+id/iv_friss_more"
+                android:layout_width="@dimen/navigation_drawer_app_icon_size"
+                android:layout_height="@dimen/navigation_drawer_app_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_overflow"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="right"
+                android:contentDescription="@string/menu_friss" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Új -->
+        <RelativeLayout
+            android:id="@+id/menu_item_uj"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_uj"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_uj"
+                android:contentDescription="@string/menu_uj" />
+
+            <TextView
+                android:id="@+id/tv_uj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_uj"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_uj" />
+
+            <ImageView
+                android:id="@+id/iv_uj_more"
+                android:layout_width="@dimen/navigation_drawer_app_icon_size"
+                android:layout_height="@dimen/navigation_drawer_app_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_overflow"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="right"
+                android:contentDescription="@string/menu_uj" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Üzenetek -->
+        <RelativeLayout
+            android:id="@+id/menu_item_uzenetek"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_uzenetek"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_uzenetek"
+                android:contentDescription="@string/menu_uzenetek" />
+
+            <TextView
+                android:id="@+id/tv_uzenetek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_uzenetek"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_uzenetek" />
+
+            <ImageView
+                android:id="@+id/iv_uzenetek_more"
+                android:layout_width="@dimen/navigation_drawer_app_icon_size"
+                android:layout_height="@dimen/navigation_drawer_app_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_overflow"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="right"
+                android:contentDescription="@string/menu_uzenetek" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Infó -->
+        <RelativeLayout
+            android:id="@+id/menu_item_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_info"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_nevjegy"
+                android:contentDescription="@string/menu_info" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_info"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_info" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Megosztás -->
+        <RelativeLayout
+            android:id="@+id/menu_megosztas"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_megosztas"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_megosztas"
+                android:contentDescription="@string/menu_megosztas" />
+
+            <TextView
+                android:id="@+id/tv_megosztas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_megosztas"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_megosztas" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Beállítások -->
+        <RelativeLayout
+            android:id="@+id/menu_beallitasok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_beallitasok"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_beallitasok"
+                android:contentDescription="@string/menu_beallitasok" />
+
+            <TextView
+                android:id="@+id/tv_beallitasok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_beallitasok"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_beallitasok" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Névjegy -->
+        <RelativeLayout
+            android:id="@+id/menu_nevjegy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_nevjegy"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_fejleszto"
+                android:contentDescription="@string/menu_nevjegy" />
+
+            <TextView
+                android:id="@+id/tv_nevjegy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_nevjegy"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_nevjegy" />
+
+        </RelativeLayout>
+
+        <!-- Menu item: Kilépés -->
+        <RelativeLayout
+            android:id="@+id/menu_kilepes"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_items_height"
+            android:padding="@dimen/navigation_drawer_items_padding"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/iv_kilepes"
+                android:layout_width="@dimen/navigation_drawer_icon_size"
+                android:layout_height="@dimen/navigation_drawer_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_kilepes"
+                android:contentDescription="@string/menu_kilepes" />
+
+            <TextView
+                android:id="@+id/tv_kilepes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_kilepes"
+                android:layout_marginLeft="@dimen/navigation_drawer_items_icon_title_margin"
+                android:gravity="left"
+                style="@style/MenuDrawerTextStyle"
+                android:text="@string/menu_kilepes" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

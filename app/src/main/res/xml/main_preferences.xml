@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2013 Daniel Velazco
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_cat_moly">
+        <EditTextPreference
+            android:dialogTitle="Felhasználónév"
+            android:defaultValue=""
+            android:dialogMessage="Add meg a felhasználóneved @ nélkül a menü személyesebbé tételéhez! :)"
+            android:negativeButtonText="Mégsem"
+            android:positiveButtonText="OK"
+            android:key="prefs_felhnev"
+            android:title="@string/prefs_felhnev"
+            />
+
+        <ListPreference
+            android:defaultValue="cimlap"
+            android:entries="@array/prefs_kezdolap_list"
+            android:entryValues="@array/prefs_kezdolap_list_values"
+            android:key="prefs_kezdolap"
+            android:summary="%s"
+            android:title="@string/prefs_kezdolap" />
+        <!--@string/prefs_kezdolap_sry-->
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefs_open_links_inside"
+            android:summary="@string/prefs_open_links_inside_sry"
+            android:title="@string/prefs_open_links_inside" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefs_block_images"
+            android:summary="@string/prefs_block_images_sry"
+            android:title="@string/prefs_block_images" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefs_show_zoom"
+            android:summary="@string/prefs_show_zoom_sry"
+            android:title="@string/prefs_show_zoom" />
+
+        <ListPreference
+            android:defaultValue="auto"
+            android:entries="@array/prefs_mobile_site_list"
+            android:entryValues="@array/prefs_mobile_site_list_values"
+            android:key="prefs_mobile_site"
+            android:summary="%s"
+            android:title="@string/prefs_mobile_site" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_cat_proxy"
+        android:title="@string/pref_cat_proxy" >
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefs_enable_proxy"
+            android:summary="@string/prefs_enable_proxy_sry"
+            android:title="@string/prefs_enable_proxy" />
+
+        <EditTextPreference
+            android:defaultValue="localhost"
+            android:key="prefs_proxy_host"
+            android:dependency="prefs_enable_proxy"
+            android:title="@string/prefs_proxy_host" />
+
+        <EditTextPreference
+            android:defaultValue="8118"
+            android:key="prefs_proxy_port"
+            android:dependency="prefs_enable_proxy"
+            android:title="@string/prefs_proxy_port" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

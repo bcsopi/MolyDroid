@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2013 Daniel Velazco
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+
+    <!-- App name -->
+    <string name="app_name">MolyDroid</string>
+    <string name="app_name_short">MolyDroid</string>
+
+    <!-- Labels -->
+    <string name="lbl_dialog_alert">Értesítés</string>
+    <string name="lbl_dialog_close">Bezárás</string>
+    <string name="lbl_dialog_ok">OK</string>
+    <string name="loading_video">Videó betöltése&#8230;</string>
+    <string name="upload_file_choose">Fájl kiválasztása</string>
+    <string name="lbl_yes">Igen</string>
+    <string name="lbl_no">Nem</string>
+    <string name="lbl_save_image">Kép mentése</string>
+
+    <!-- Sharing -->
+    <string name="share_action">Link megosztása</string>
+    <string name="share_action_subject">Moly hivatkozás</string>
+
+    <!-- Context menu items -->
+    <string name="menu_asztal">Asztal</string>
+    <string name="menu_mobil">Mobil</string>
+    <string name="menu_tetejere">Ugrás a tetejére</string>
+    <string name="menu_cimlap">Címlap</string>
+    <string name="menu_megosztas">Megosztás</string>
+    <string name="menu_url_masolasa">URL másolása</string>
+    <string name="menu_frissites">Frissítés</string>
+    <string name="menu_uj">Új</string>
+    <string name="menu_friss">Friss</string>
+    <string name="menu_uzenetek">Üzenetek</string>
+    <string name="menu_info">Infó</string>
+    <string name="menu_beallitasok">Beállítások</string>
+    <string name="menu_nevjegy">Névjegy</string>
+    <string name="menu_kilepes">Kilépés</string>
+
+    <!-- Preferences -->
+    <string name="pref_cat_moly">Moly</string>
+    <string name="pref_cat_proxy">Proxy</string>
+    <string name="prefs_kezdolap">Kezdőlap</string>
+    <string name="prefs_kezdolap_sry">Induláskor betöltött oldal kiválasztása</string>
+    <string name="prefs_open_links_inside">Linkek megnyitása</string>
+    <string name="prefs_open_links_inside_sry">Minden link az alkalmazásban nyílik meg a böngésző helyett</string>
+    <string name="prefs_block_images">Képek letiltása</string>
+    <string name="prefs_block_images_sry">Mobilneten hasznos, frissíteni kell hozzá az oldalt</string>
+    <string name="prefs_show_zoom">Zoom-gombok megjelenítése</string>
+    <string name="prefs_show_zoom_sry">Ettől függetlenül a multitouch működik</string>
+    <string name="pref_hide_ab">Auto-hide ActionBar</string>
+    <string name="pref_hide_ab_sry">Automatically hide the ActionBar while scrolling down or not using. Scroll back up to make it appear again.</string>
+    <string name="prefs_mobile_site">Mobil/asztali oldal</string>
+    <string name="prefs_mobile_site_sry">Az alkalmazott nézet kiválasztása</string>
+    <string name="prefs_enable_proxy">Proxy bekapcsolása</string>
+    <string name="prefs_enable_proxy_sry">Hálózati proxy beállítása</string>
+    <string name="prefs_proxy_host">Proxy host</string>
+    <string name="prefs_proxy_port">Proxy port</string>
+    <string name="prefs_felhnev">Felhasználónév</string>
+
+    <array name="prefs_kezdolap_list">
+        <item>Címlap</item>
+        <item>Profil</item>
+        <item>Friss</item>
+        <item>Friss tagok szerint</item>
+        <item>Friss könyvek szerint</item>
+        <item>Friss zónák szerint</item>
+        <item>Üzenetek</item>
+        <item>Új</item>
+        <item>Szerencsesüti</item>
+    </array>
+    <array name="prefs_kezdolap_list_values">
+        <item>cimlap</item>
+        <item>profil</item>
+        <item>friss</item>
+        <item>tagok</item>
+        <item>konyvek</item>
+        <item>zonak</item>
+        <item>uzenetek</item>
+        <item>uj</item>
+        <item>szsuti</item>
+    </array>
+
+    <array name="prefs_mobile_site_list">
+        <item>Automatikus</item>
+        <item>Mobil oldal</item>
+        <item>Asztali oldal</item>
+    </array>
+    <array name="prefs_mobile_site_list_values">
+        <item>auto</item>
+        <item>mobile</item>
+        <item>desktop</item>
+    </array>
+    <!-- End preferences -->
+
+    <string name="txt_save_image_success">Kép letöltve.</string>
+    <string name="txt_save_image_failed">Nem sikerült a letöltés!</string>
+
+    <!-- Orbot related strings -->
+    <string name="market_orbot">market://search?q=pname:org.torproject.android</string>
+    <string name="start_orbot_">Start Orbot?</string>
+    <string name="orbot_not_running_start_it_question">Orbot doesn\'t appear to be running. Would you like to start it up and connect to Tor?</string>
+
+    <!-- Text used on the "about" dialog -->
+    <string name="txt_checkins_disables">\nFacebook is trying to access your location.\n
+\nMost likely you are trying to \"Check-in\" to a specific place. While Tinfoil has optional permissions used for this, it is disabled by default.\n
+\nYou can enable this feature by going to the Preferences and checking the option that says \"Allow Check-ins.\"\n
+\nTinfoil only shares \"Coarse location\", this doesn\'t use the GPS, only Network and Wi-fi location in order to save battery.\n
+\n</string>
+
+<!-- Text used on the "about" dialog -->
+<string name="txt_about">
+\nKészítette @bcsopi. Észrevételekkel, javaslatokkal bátran keress molyon! :)\n
+\n
+\nEz az alkalmazás a "Tinfoil for Facebook" fork-ja.
+\nMaster branch: https://github.com/velazcod/Tinfoil-Facebook\n
+</string>
+
+    <string name="hr">______________________________</string>
+
+</resources>
